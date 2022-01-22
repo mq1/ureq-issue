@@ -12,9 +12,9 @@ fn main() {
 
     let resp = ureq::post("https://user.auth.xboxlive.com/user/authenticate")
         .send_string(query);
-    
+
+    println!("ureq:");
     if let Ok(response) = resp {
-        println!("ureq:");
         println!("{:?}", response);
     } else if let Err(e) = resp {
         println!("{}", e);
